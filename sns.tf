@@ -1,11 +1,11 @@
 
 
-resource "aws_sns_topic" "cost_alert" {
-  name = var.sns_topic_name
-}
+module "sns_email_topic" {
+  source = "./modules/tf_sns_email"
 
-resource "aws_sns_topic_subscription" "cost_alert_email" {
-  topic_arn = aws_sns_topic.cost_alert.arn
-  protocol  = "email"
-  endpoint  = var.endpoint_emails
+  display_name    = "Cost Alert SNS Topic"
+  email_address_1 = var.email_address_1
+  email_address_2 = var.email_address_2
+  owner           = "formacao-sre-iac:formacao-sre-cost-alarm-sns-iac"
+  stack_name      = "formacao-sre-cost-alarm-sns-iac"
 }

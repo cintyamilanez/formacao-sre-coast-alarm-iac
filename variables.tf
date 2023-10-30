@@ -66,7 +66,12 @@ variable "sns_topic_name" {
   default = "cost_alert"
 }
 
-variable "endpoint_emails" {
+variable "email_address_1" {
   type    = string
-  default = "cintya_milanez@hotmail.com, paulo.sobral@outlook.com.br"
+  default = "xxx@yyyy.com"
+}
+
+variable "email_address_2" {
+  type    = string
+  default = "xxx@yyyy.com"
 }

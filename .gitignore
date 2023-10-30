@@ -1,5 +1,8 @@
-# Created by https://www.toptal.com/developers/gitignore/api/terraform,visualstudiocode
-# Edit at https://www.toptal.com/developers/gitignore?templates=terraform,visualstudiocode
+# Created by https://www.toptal.com/developers/gitignore/api/terraform,windows,linux,ansiblenode
+# Edit at https://www.toptal.com/developers/gitignore?templates=terraform,windows,linux,ansible
+
+### Ansible ###
+*.retry
 
 ### Terraform ###
 # Local .terraform directories
@@ -17,7 +20,7 @@ crash.*.log
 # password, private keys, and other secrets. These should not be part of version
 # control as they are data points which are potentially sensitive and subject
 # to change depending on the environment.
-*.tfvars
+# *.tfvars
 *.tfvars.json
 
 # Ignore override files as they are usually used to override resources locally and so
@@ -38,23 +41,48 @@ override.tf.json
 terraform.rc
 .terraform.lock.hcl
 
-### VisualStudioCode ###
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-!.vscode/*.code-snippets
+### Windows ###
+# Windows thumbnail cache files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
 
-# Local History for Visual Studio Code
-.history/
+# Dump file
+*.stackdump
 
-# Built Visual Studio Code Extensions
-*.vsix
+# Folder config file
+[Dd]esktop.ini
 
-### VisualStudioCode Patch ###
-# Ignore all local history of files
-.history
-.ionide
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
 
-# End of https://www.toptal.com/developers/gitignore/api/terraform,visualstudiocode
+# Windows Installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# Created by https://www.toptal.com/developers/gitignore/api/linux
+# Edit at https://www.toptal.com/developers/gitignore?templates=linux
+
+### Linux ###
+*~
+
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+# .nfs files are created when an open file is removed but is still being accessed
+.nfs*
+
+# End of https://www.toptal.com/developers/gitignore/api/terraform,windows,linux,ansible

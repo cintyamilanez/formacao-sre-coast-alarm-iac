@@ -10,11 +10,11 @@ resource "aws_cloudwatch_metric_alarm" "cost_alert" {
   alarm_description   = var.alarm_description
 
   alarm_actions = [
-    "arn:aws:sns:us-east-1:123456789012:cost_alert"
+    module.sns_email_topic.arn
   ]
 
   ok_actions = [
-    "arn:aws:sns:us-east-1:123456789012:cost_alert"
+    module.sns_email_topic.arn
   ]
 
   insufficient_data_actions = []
